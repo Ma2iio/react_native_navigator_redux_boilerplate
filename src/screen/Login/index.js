@@ -10,7 +10,7 @@ class Login extends React.Component {
           Hello World
         </Text>
         <Button
-          onPress={() => this.props.navigation.navigate('drawerStack')}
+          onPress={() => this.props.navigation.navigate('HomeScreen')}
           title="Pretend we logged in"
         />
       </Container>
