@@ -2,9 +2,8 @@ import React from 'react'
 import { Platform } from 'react-native'
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Text } from 'native-base'
 
-import AppNavigator from './Navigation/Main'
-
-export default class App extends React.Component {
+import AppNavigator from './navigation/Main'
+class App extends React.Component {
   state = {
     fontLoaded: false,
   }
@@ -28,3 +27,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App
