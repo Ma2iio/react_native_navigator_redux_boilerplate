@@ -1,8 +1,8 @@
 Arguments: 
-  D:\Program Files\nodejs\node.exe C:\Users\Apichai\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-navigation
+  D:\Program Files\nodejs\node.exe C:\Users\Apichai\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
 
 PATH: 
-  C:\Program Files\Docker\Docker\Resources\bin;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\nodejs\;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Users\Apichai\AppData\Local\Android\Sdk\build-tools;C:\Users\Apichai\AppData\Local\Android\Sdk\platform-tools;C:\Go\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\Apichai\AppData\Local\Microsoft\WindowsApps;C:\Users\Apichai\AppData\Roaming\npm;C:\Users\Apichai\AppData\Roaming\Composer\vendor\bin;d:\Program Files\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox
+  D:\Program Files\cmder\bin;C:\Users\Apichai\AppData\Local\Android\sdk\emulator;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\Program Files\cmder\vendor\conemu-maximus5;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Docker\Docker\Resources\bin;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\nodejs\;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Users\Apichai\AppData\Local\Android\Sdk\build-tools;C:\Users\Apichai\AppData\Local\Android\Sdk\platform-tools;C:\Go\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\Apichai\AppData\Local\Microsoft\WindowsApps;;C:\Users\Apichai\AppData\Roaming\npm;C:\Users\Apichai\AppData\Roaming\Composer\vendor\bin;d:\Program Files\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;D:\Program Files\cmder\
 
 Yarn version: 
   1.0.1
@@ -22,7 +22,10 @@ npm manifest:
       "expo": "^23.0.0",
       "native-base": "^2.3.5",
       "react": "16.0.0",
-      "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz"
+      "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
+      "react-navigation": "^1.0.0-beta.21",
+      "react-redux": "^5.0.6",
+      "redux": "^3.7.2"
     }
   }
 
@@ -463,6 +466,13 @@ Lockfile:
       babel-plugin-syntax-decorators "^6.1.18"
       babel-runtime "^6.2.0"
       babel-template "^6.3.0"
+  
+  babel-plugin-transform-define@^1.3.0:
+    version "1.3.0"
+    resolved "https://registry.yarnpkg.com/babel-plugin-transform-define/-/babel-plugin-transform-define-1.3.0.tgz#94c5f9459c810c738cc7c50cbd44a31829d6f319"
+    dependencies:
+      lodash "4.17.4"
+      traverse "0.6.6"
   
   babel-plugin-transform-es2015-arrow-functions@^6.5.0, babel-plugin-transform-es2015-arrow-functions@^6.8.0:
     version "6.22.0"
@@ -1494,13 +1504,9 @@ Lockfile:
     dependencies:
       is-extglob "^1.0.0"
   
-  extsprintf@1.3.0:
+  extsprintf@1.3.0, extsprintf@^1.2.0:
     version "1.3.0"
     resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.3.0.tgz#96918440e3041a7a414f8c52e3c574eb3c3e1e05"
-  
-  extsprintf@^1.2.0:
-    version "1.4.0"
-    resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   
   fancy-log@^1.1.0:
     version "1.3.1"
@@ -1860,6 +1866,10 @@ Lockfile:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
   
+  hoist-non-react-statics@^2.2.0, hoist-non-react-statics@^2.2.1:
+    version "2.3.1"
+    resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
+  
   home-or-tmp@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/home-or-tmp/-/home-or-tmp-2.0.0.tgz#e36c3f2d2cae7d746a857e38d18d5f32a7882db8"
@@ -1894,7 +1904,7 @@ Lockfile:
       jsprim "^1.2.2"
       sshpk "^1.7.0"
   
-  iconv-lite@0.4.11:
+  iconv-lite@0.4.11, iconv-lite@^0.4.8:
     version "0.4.11"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.11.tgz#2ecb42fd294744922209a2e7c404dac8793d8ade"
   
@@ -1902,7 +1912,7 @@ Lockfile:
     version "0.4.13"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
   
-  iconv-lite@^0.4.17, iconv-lite@^0.4.8, iconv-lite@~0.4.13:
+  iconv-lite@^0.4.17, iconv-lite@~0.4.13:
     version "0.4.19"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
   
@@ -1952,7 +1962,7 @@ Lockfile:
       strip-ansi "^4.0.0"
       through "^2.3.6"
   
-  invariant@^2.2.2:
+  invariant@^2.0.0, invariant@^2.2.2:
     version "2.2.2"
     resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
     dependencies:
@@ -2201,6 +2211,10 @@ Lockfile:
       p-locate "^2.0.0"
       path-exists "^3.0.0"
   
+  lodash-es@^4.2.0, lodash-es@^4.2.1:
+    version "4.17.4"
+    resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.4.tgz#dcc1d7552e150a0640073ba9cb31d70f032950e7"
+  
   lodash._basecopy@^3.0.0:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/lodash._basecopy/-/lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36"
@@ -2304,13 +2318,13 @@ Lockfile:
     version "4.1.3"
     resolved "https://registry.yarnpkg.com/lodash.zipobject/-/lodash.zipobject-4.1.3.tgz#b399f5aba8ff62a746f6979bf20b214f964dbef8"
   
+  lodash@4.17.4, lodash@^4.0.0, lodash@^4.10.1, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+    version "4.17.4"
+    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  
   lodash@^3.5.0:
     version "3.10.1"
     resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
-  
-  lodash@^4.0.0, lodash@^4.10.1, lodash@^4.11.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.6.1:
-    version "4.17.4"
-    resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
   
   lodash@~4.11.1:
     version "4.11.2"
@@ -2462,13 +2476,13 @@ Lockfile:
     version "1.30.0"
     resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.30.0.tgz#74c643da2dd9d6a45399963465b26d5ca7d71f01"
   
-  mime-types@2.1.11:
+  mime-types@2.1.11, mime-types@~2.1.9:
     version "2.1.11"
     resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.11.tgz#c259c471bda808a85d6cd193b430a5fae4473b3c"
     dependencies:
       mime-db "~1.23.0"
   
-  mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, mime-types@~2.1.6, mime-types@~2.1.7, mime-types@~2.1.9:
+  mime-types@^2.1.12, mime-types@~2.1.15, mime-types@~2.1.16, mime-types@~2.1.17, mime-types@~2.1.6, mime-types@~2.1.7:
     version "2.1.17"
     resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.17.tgz#09d7a393f03e995a79f8af857b70a9e0ab16557a"
     dependencies:
@@ -2498,17 +2512,13 @@ Lockfile:
     dependencies:
       brace-expansion "^1.1.7"
   
-  minimist@0.0.8:
+  minimist@0.0.8, minimist@~0.0.1:
     version "0.0.8"
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
   
   minimist@^1.1.0, minimist@^1.1.1, minimist@^1.2.0:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
-  
-  minimist@~0.0.1:
-    version "0.0.10"
-    resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf"
   
   "mkdirp@>=0.5 0", mkdirp@^0.5.1:
     version "0.5.1"
@@ -2820,6 +2830,12 @@ Lockfile:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
   
+  path-to-regexp@^1.7.0:
+    version "1.7.0"
+    resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-1.7.0.tgz#59fde0f435badacba103a84e9d3bc64e96b9937d"
+    dependencies:
+      isarray "0.0.1"
+  
   path-type@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
@@ -2995,6 +3011,22 @@ Lockfile:
     version "2.0.0-beta.3"
     resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-2.0.0-beta.3.tgz#2167af86bbc9f964bd45bd5f37684e5b54965e32"
   
+  react-native-dismiss-keyboard@1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
+  
+  react-native-drawer-layout-polyfill@^1.3.2:
+    version "1.3.2"
+    resolved "https://registry.yarnpkg.com/react-native-drawer-layout-polyfill/-/react-native-drawer-layout-polyfill-1.3.2.tgz#192c84d7a5a6b8a6d2be2c7daa5e4164518d0cc7"
+    dependencies:
+      react-native-drawer-layout "1.3.2"
+  
+  react-native-drawer-layout@1.3.2:
+    version "1.3.2"
+    resolved "https://registry.yarnpkg.com/react-native-drawer-layout/-/react-native-drawer-layout-1.3.2.tgz#b9740d7663a1dc4f88a61b9c6d93d2d948ea426e"
+    dependencies:
+      react-native-dismiss-keyboard "1.0.0"
+  
   "react-native-drawer@https://github.com/GeekyAnts/react-native-drawer":
     version "2.3.0"
     resolved "https://github.com/GeekyAnts/react-native-drawer#8d9078516d177c9cb02d2579a6860706d2370d25"
@@ -3038,6 +3070,12 @@ Lockfile:
     dependencies:
       color "^2.0.1"
       lodash "^4.16.6"
+  
+  react-native-tab-view@^0.0.70:
+    version "0.0.70"
+    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.70.tgz#1dd2ded32acd0cb6bfef38d26e53675db733b37b"
+    dependencies:
+      prop-types "^15.5.10"
   
   react-native-vector-icons@4.4.2, react-native-vector-icons@~4.4.2:
     version "4.4.2"
@@ -3104,12 +3142,35 @@ Lockfile:
       xmldoc "^0.4.0"
       yargs "^9.0.0"
   
+  react-navigation@^1.0.0-beta.21:
+    version "1.0.0-beta.21"
+    resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-1.0.0-beta.21.tgz#086c504ba84c966ef8db898baef6fa14ff45a06f"
+    dependencies:
+      babel-plugin-transform-define "^1.3.0"
+      clamp "^1.0.1"
+      hoist-non-react-statics "^2.2.0"
+      path-to-regexp "^1.7.0"
+      prop-types "^15.5.10"
+      react-native-drawer-layout-polyfill "^1.3.2"
+      react-native-tab-view "^0.0.70"
+  
   react-proxy@^1.1.7:
     version "1.1.8"
     resolved "https://registry.yarnpkg.com/react-proxy/-/react-proxy-1.1.8.tgz#9dbfd9d927528c3aa9f444e4558c37830ab8c26a"
     dependencies:
       lodash "^4.6.1"
       react-deep-force-update "^1.0.0"
+  
+  react-redux@^5.0.6:
+    version "5.0.6"
+    resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
+    dependencies:
+      hoist-non-react-statics "^2.2.1"
+      invariant "^2.0.0"
+      lodash "^4.2.0"
+      lodash-es "^4.2.0"
+      loose-envify "^1.1.0"
+      prop-types "^15.5.10"
   
   react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
     version "0.13.3"
@@ -3173,6 +3234,15 @@ Lockfile:
       inherits "~2.0.1"
       isarray "0.0.1"
       string_decoder "~0.10.x"
+  
+  redux@^3.7.2:
+    version "3.7.2"
+    resolved "https://registry.yarnpkg.com/redux/-/redux-3.7.2.tgz#06b73123215901d25d065be342eb026bc1c8537b"
+    dependencies:
+      lodash "^4.2.1"
+      lodash-es "^4.2.1"
+      loose-envify "^1.1.0"
+      symbol-observable "^1.0.3"
   
   regenerate@^1.2.1:
     version "1.3.3"
@@ -3628,6 +3698,10 @@ Lockfile:
     dependencies:
       has-flag "^2.0.0"
   
+  symbol-observable@^1.0.3:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.1.0.tgz#5c68fd8d54115d9dfb72a84720549222e8db9b32"
+  
   sync-exec@~0.6.x:
     version "0.6.2"
     resolved "https://registry.yarnpkg.com/sync-exec/-/sync-exec-0.6.2.tgz#717d22cc53f0ce1def5594362f3a89a2ebb91105"
@@ -3702,6 +3776,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.3.tgz#0b618a5565b6dea90bf3425d04d55edc475a7561"
     dependencies:
       punycode "^1.4.1"
+  
+  traverse@0.6.6:
+    version "0.6.6"
+    resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   
   trim-right@^1.0.1:
     version "1.0.1"
@@ -3853,11 +3931,7 @@ Lockfile:
       pouchdb-collections "^1.0.1"
       tiny-queue "^0.2.1"
   
-  whatwg-fetch@>=0.10.0:
-    version "2.0.3"
-    resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
-  
-  whatwg-fetch@^1.0.0:
+  whatwg-fetch@>=0.10.0, whatwg-fetch@^1.0.0:
     version "1.1.1"
     resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-1.1.1.tgz#ac3c9d39f320c6dce5339969d054ef43dd333319"
   

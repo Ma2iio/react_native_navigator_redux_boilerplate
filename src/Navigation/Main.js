@@ -29,8 +29,6 @@ class _AppNavigator extends React.Component {
 const mapStateToProps = ({
   nav
 }) => {
-  console.log(32)
-  console.log(nav)
   return {
     nav,
   }

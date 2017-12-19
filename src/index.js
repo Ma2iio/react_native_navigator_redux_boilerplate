@@ -2,7 +2,7 @@ import React from 'react'
 import { Platform } from 'react-native'
 import { Container, Header, Left, Body, Right, Button, Icon, Title, Text } from 'native-base'
 
-import AppNavigator from './navigation/Main'
+import AppNavigator from './Navigation/Main'
 class App extends React.Component {
   state = {
     fontLoaded: false,

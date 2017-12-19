@@ -1,7 +1,5 @@
 import React from 'react'
 import { Button } from 'react-native'
-import api from 'HSApichai'
-console.log(api.primary1)
 import {
   Header,
   Body,

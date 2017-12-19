@@ -10,7 +10,7 @@ import Login from '../screen/Login'
 import Screen1 from '../screen/Screen1'
 import Screen2 from '../screen/Screen2'
 import Screen3 from '../screen/Screen3'
-import Sidebar from '../component/Sidebar'
+import Sidebar from '../Component/Sidebar'
 
 const HomeNavigator = DrawerNavigator({
   screen1: {
