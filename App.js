@@ -1,21 +1,34 @@
 import React from 'react'
 import {
+  ActivityIndicator,
+} from 'react-native'
+import {
   Provider,
 } from 'react-redux'
-import {
-  createStore,
-} from 'redux'
+import { PersistGate } from 'redux-persist/es/integration/react'
 import { Root } from "native-base"
-import App from './src'
-import reducer from './src/reducer'
 
-const store = createStore(reducer)
+import App from './src'
+import configureStore from './src/reducer/configureStore'
+
+const { persistor, store } = configureStore()
+
+const onBeforeLift = () => {
+  console.log('before lift')
+}
+
 const _App = () => {
   return (
     <Provider store={store}>
-      <Root>
-        <App />
-      </Root>
+      <PersistGate
+        loading={<ActivityIndicator />}
+        onBeforeLift={onBeforeLift}
+        persistor={persistor}
+      >
+        <Root>
+          <App />
+        </Root>
+      </PersistGate>
     </Provider>
   )
 }
