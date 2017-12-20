@@ -1,6 +1,7 @@
 /**
- * @providesModule HSApichai
+ * @providesModule HSColor
  */
+
 export default {
   primary: '#397af8',
   primary1: '#4d86f7',
@@ -14,5 +15,11 @@ export default {
   grey4: '#bdc6cf',
   grey5: '#e1e8ee',
   dkGreyBg: '#232323',
-  greyOutline: '#cbd2d9'
+  greyOutline: '#cbd2d9',
+  //credit: http://www.color-hex.com/color-palette/51985
+  ts1: '#a81c66',
+  ts2: '#b82152',
+  ts3: '#de3f52',
+  ts4: '#ee5b48',
+  ts5: '#ff9657',
 }

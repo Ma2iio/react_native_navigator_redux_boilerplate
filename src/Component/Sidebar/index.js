@@ -25,20 +25,20 @@ const drawerImage = require("../../../img/logo-kitchen-sink.png");
 
 const datas = [
 	{
-		name: "Screen1",
-		route: "screen1",
+		name: "Login",
+		route: "LoginScreen",
 		icon: "phone-portrait",
 		bg: "#C5F442",
 	},
 	{
-		name: "Screen2",
-		route: "screen2",
+		name: "Home",
+		route: "HomeScreen",
 		icon: "easel",
 		bg: "#C5F442",
 	},
 	{
-		name: "Header",
-		route: "Header",
+		name: "screen1",
+		route: "screen2",
 		icon: "phone-portrait",
 		bg: "#477EEA",
 		types: "8",

@@ -32,9 +32,6 @@ const MainNavigator = StackNavigator(
         LoginScreen: {
             screen: Login,
         },
-        LoginScreen1: {
-            screen: Login,
-        },
         HomeScreen: {
             screen: HomeNavigator,
         },

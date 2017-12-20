@@ -1,5 +1,5 @@
 Arguments: 
-  D:\Program Files\nodejs\node.exe C:\Users\Apichai\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+  D:\Program Files\nodejs\node.exe C:\Users\Apichai\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-native-elements
 
 PATH: 
   D:\Program Files\cmder\bin;C:\Users\Apichai\AppData\Local\Android\sdk\emulator;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\Program Files\cmder\vendor\conemu-maximus5;D:\Program Files\cmder\vendor\conemu-maximus5\ConEmu;C:\Program Files\Docker\Docker\Resources\bin;C:\Python27\;C:\Python27\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Program Files\nodejs\;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Users\Apichai\AppData\Local\Android\Sdk\build-tools;C:\Users\Apichai\AppData\Local\Android\Sdk\platform-tools;C:\Go\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Users\Apichai\AppData\Local\Microsoft\WindowsApps;;C:\Users\Apichai\AppData\Roaming\npm;C:\Users\Apichai\AppData\Roaming\Composer\vendor\bin;d:\Program Files\Microsoft VS Code\bin;C:\Program Files\Docker Toolbox;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\share\vim\vim74;D:\Program Files\cmder\
@@ -17,6 +17,10 @@ npm manifest:
   {
     "main": "node_modules/expo/AppEntry.js",
     "private": true,
+    "scripts": {
+      "run-ios": "react-native run-ios --simulator='iPhone 5s'",
+      "run-andriod": "react-native run-andriod"
+    },
     "dependencies": {
       "@expo/vector-icons": "^6.2.1",
       "expo": "^23.0.0",
@@ -25,7 +29,8 @@ npm manifest:
       "react-native": "https://github.com/expo/react-native/archive/sdk-23.0.0.tar.gz",
       "react-navigation": "^1.0.0-beta.21",
       "react-redux": "^5.0.6",
-      "redux": "^3.7.2"
+      "redux": "^3.7.2",
+      "redux-persist": "^5.4.0"
     }
   }
 
@@ -3027,9 +3032,9 @@ Lockfile:
     dependencies:
       react-native-dismiss-keyboard "1.0.0"
   
-  "react-native-drawer@https://github.com/GeekyAnts/react-native-drawer":
+  "react-native-drawer@git+https://github.com/GeekyAnts/react-native-drawer.git":
     version "2.3.0"
-    resolved "https://github.com/GeekyAnts/react-native-drawer#8d9078516d177c9cb02d2579a6860706d2370d25"
+    resolved "git+https://github.com/GeekyAnts/react-native-drawer.git#8d9078516d177c9cb02d2579a6860706d2370d25"
     dependencies:
       prop-types "^15.5.8"
       tween-functions "^1.0.1"
@@ -3046,9 +3051,9 @@ Lockfile:
     dependencies:
       prop-types "^15.5.10"
   
-  "react-native-keyboard-aware-scroll-view@https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view":
+  "react-native-keyboard-aware-scroll-view@git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git":
     version "0.2.9"
-    resolved "https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view#f4805f254d6cc8e3329f5fb224944401f66655db"
+    resolved "git+https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view.git#f4805f254d6cc8e3329f5fb224944401f66655db"
     dependencies:
       create-react-class "^15.6.0"
       prop-types "^15.5.10"
@@ -3077,9 +3082,17 @@ Lockfile:
     dependencies:
       prop-types "^15.5.10"
   
-  react-native-vector-icons@4.4.2, react-native-vector-icons@~4.4.2:
+  react-native-vector-icons@4.4.2:
     version "4.4.2"
     resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.4.2.tgz#090f42ee0396c4cc4eae0ddaa518028ba8df40c7"
+    dependencies:
+      lodash "^4.0.0"
+      prop-types "^15.5.10"
+      yargs "^8.0.2"
+  
+  react-native-vector-icons@~4.4.2:
+    version "4.4.3"
+    resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.4.3.tgz#9e847b8c432a17e5e0ffd60ccf09f3112a18b9df"
     dependencies:
       lodash "^4.0.0"
       prop-types "^15.5.10"
@@ -3234,6 +3247,10 @@ Lockfile:
       inherits "~2.0.1"
       isarray "0.0.1"
       string_decoder "~0.10.x"
+  
+  redux-persist@^5.4.0:
+    version "5.4.0"
+    resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-5.4.0.tgz#a1062313546a9d4ca6f9271464d18f736e8ca394"
   
   redux@^3.7.2:
     version "3.7.2"

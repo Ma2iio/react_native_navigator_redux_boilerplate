@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import {
   Header,
   Button,
@@ -12,8 +14,22 @@ import {
   Title,
 } from 'native-base'
 
+const getCurrentRoute = (state) => {
+  const findCurrentRoute = (navState) => {
+    if (navState.index !== undefined) {
+      return findCurrentRoute(navState.routes[navState.index])
+    }
+    return navState.routeName
+  }
+  return findCurrentRoute(state.nav)
+}
+
 class ContainerNav extends React.Component {
+
   render () {
+    const {
+      nameRoute,
+    } = this.props
     return (
       <Container>
         <Header>
@@ -26,7 +42,7 @@ class ContainerNav extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title>Header</Title>
+            <Title>{nameRoute}</Title>
           </Body>
           <Right />
         </Header>
@@ -36,4 +52,14 @@ class ContainerNav extends React.Component {
   }
 }
 
-export default ContainerNav
+ContainerNav.propTypes = {
+  nameRoute: PropTypes.string,
+}
+
+const mapStateToProps = (state) => {
+  return {
+    nameRoute: getCurrentRoute(state)
+  }
+}
+
+export default connect(mapStateToProps, null)(ContainerNav)
