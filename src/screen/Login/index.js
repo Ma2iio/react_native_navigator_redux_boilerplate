@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  KeyboardAvoidingView,
   View,
   StyleSheet,
 } from 'react-native'
@@ -23,18 +24,15 @@ import Color from 'HSColor'
 import styles from './styles'
 
 class Login extends React.Component {
+
+
   render () {
     return (
       <Container
         backgroundColor={Color.ts2}
       >
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
+        <Content
+          scrollEnabled
         >
           <Icon
             name="boat"
@@ -46,28 +44,100 @@ class Login extends React.Component {
               }}
             />
           <Text style={{ fontSize: 32, color: '#fff' }} >GPS Tracker</Text>
-        </View>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: 'column',
-            justifyContent: 'center',
-          }}
-        >
-          <Content>
+          <KeyboardAvoidingView
+            behavior="padding"
+            resetScrollToCoords={{ x: 0, y: 0 }}
+            keyboardVerticalOffset={50}
+          >
             <FormLabel>
               Username
             </FormLabel>
             <FormInput />                
-            <FormLabel containerStyle={styles.title}>Password</FormLabel>
+            <FormLabel>Password</FormLabel>
             <FormInput />                
             <Button
               backgroundColor={Color.primary}
               onPress={() => this.props.navigation.navigate('HomeScreen')}
               title="Login"
             />
-          </Content>
-        </View>
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <Button
+              backgroundColor={Color.primary}
+              onPress={() => this.props.navigation.navigate('HomeScreen')}
+              title="Login"
+            />
+            <FormInput />
+          </KeyboardAvoidingView>
+        </Content>
       </Container>
     )
   }
